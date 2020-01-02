@@ -4,11 +4,11 @@ import "./App.css";
 
 const url = "https://yogapi.herokuapp.com";
 
-class Price extends Component {
+class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      asanas =  []
+      asanas : []
     };
   }
   
@@ -17,14 +17,14 @@ class Price extends Component {
       .then(response => response.json())
       .then((data) => {
         console.log(data)
-        this.setState {(
+        this.setState ({
           asanas: data.map(item => ({
             id:  item.id,
             sanskrit_name: item.sanskrit_name,
             english_name: item.english_name,
             img_url: item.img_url
           }))
-        )}
+        })
       })
       .catch(err => {
         console.error(err)
