@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "./App.css";
+import Asana from './components/Asana'
 
 const url = "https://yogapi.herokuapp.com";
 
 class App extends Component {
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
     this.state = {
       asanas : []
     };
@@ -16,14 +16,8 @@ class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then((data) => {
-        console.log(data)
         this.setState ({
-          asanas: data.map(item => ({
-            id:  item.id,
-            sanskrit_name: item.sanskrit_name,
-            english_name: item.english_name,
-            img_url: item.img_url
-          }))
+          asanas: data
         })
       })
       .catch(err => {
@@ -32,10 +26,14 @@ class App extends Component {
   }
 
   render() {
+        let stuff = this.state.asanas.map(items => {
+        return <Asana key={items.id} sanskrit_name={items.sanskrit_name} />
+    })
+    console.log(stuff)
     return (
       <div>
         <h1>Asana Browser</h1>
-        {/* <Asana key={item.id} item={item.sanskrit_name}/> */}
+        <li>{stuff}</li>
       </div>
     );
   }
