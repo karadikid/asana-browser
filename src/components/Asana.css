@@ -1,0 +1,9 @@
+img {
+    max-width: 300px;
+}
+
+.Card {
+    display: flex;
+    flex-wrap: nowrap;   
+
+}
