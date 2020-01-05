@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Asana from './components/Asana'
+import CardColumns from 'react-bootstrap/CardColumns'
 
 const url = "https://yogapi.herokuapp.com";
 
@@ -27,7 +28,7 @@ class App extends Component {
 
   render() {
         let asanaData = this.state.asanas.map(items => {
-        return <Asana class='Card'
+        return <Asana 
                 key={items.id} 
                 sanskrit_name={items.sanskrit_name} 
                 english_name={items.english_name}
@@ -36,10 +37,10 @@ class App extends Component {
     })
 
     return (
-      <div>
+      <CardColumns>
         <h1>Asana Browser</h1>
         <ul class = 'cardObject'>{asanaData}</ul>
-      </div>
+      </CardColumns>
     );
   }
 }
