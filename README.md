@@ -6,6 +6,8 @@ https://github.com/karadikid/yoga-api
 Deployed URL:
 https://asanas.ommygod.com
 
+Uses AWS Amplify Serverless
+
 This application uses React to pull data from an API the developer designed and pushed to Heroku and MongoAtlas
 
 ## URL
