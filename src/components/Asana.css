@@ -1,9 +1,7 @@
-img {
-    max-width: 300px;
+.cardObject {
+    display: flex;
+    flex-wrap: wrap;
+    width: '18rem';   
+    max-width: 350px;
 }
 
-.Card {
-    display: flex;
-    flex-wrap: nowrap;
-    width: '18rem';   
-}

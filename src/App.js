@@ -38,7 +38,7 @@ class App extends Component {
     return (
       <div>
         <h1>Asana Browser</h1>
-        <ul>{asanaData}</ul>
+        <ul class = 'cardObject'>{asanaData}</ul>
       </div>
     );
   }
