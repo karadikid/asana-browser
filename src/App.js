@@ -40,12 +40,14 @@ class App extends Component {
 
     return (
       <>
+        <div className='asanaBrowser'>
+        <h1>Asana Browser</h1>
+        <button className='cardButton' onClick=''>Add</button>
+        <button className='cardButton' onClick=''>Remove</button>
         <CardColumns>
-          <h1>Asana Browser</h1>
-          <ul class="cardObject">{asanaData}</ul>
+          <ul className="cardObject">{asanaData}</ul>
         </CardColumns>
-        <button>Add</button>
-        <button>Remove</button>
+        </div>
       </>
     );
   }

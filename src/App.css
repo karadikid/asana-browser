@@ -1,6 +1,17 @@
+.asanaBrowser {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardButton {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: auto;
+  border: 1px solid black;
+}
+
 
 .cardObject {
   display: flex;
   flex-wrap: wrap;
 }
-

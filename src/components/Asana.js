@@ -6,7 +6,7 @@ import CardDeck from "react-bootstrap/CardDeck";
 
 class Asana extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <>
         <CardDeck>
