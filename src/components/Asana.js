@@ -10,7 +10,7 @@ class Asana extends Component {
     return (
       <>
         <CardDeck>
-          <Card>
+          <Card style={{ width: '18rem' }}>
             <Card.Img class="cardImage" variant="top" src={this.props.url} />
             <Card.Body>
               <Card.Title>{this.props.sanskrit_name}</Card.Title>
