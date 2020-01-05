@@ -1,5 +1,10 @@
-# Asana Browser
+# Asana Browser MERN Application
+
+MEN API
 https://github.com/karadikid/yoga-api
+
+Deployed URL:
+https://asanas.ommygod.com
 
 This application uses React to pull data from an API the developer designed and pushed to Heroku and MongoAtlas
 
