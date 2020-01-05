@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   render() {
-        let ripper = this.state.asanas.map(items => {
+        let asanaData = this.state.asanas.map(items => {
         return <Asana 
                 key={items.id} 
                 sanskrit_name={items.sanskrit_name} 
@@ -38,7 +38,7 @@ class App extends Component {
     return (
       <div>
         <h1>Asana Browser</h1>
-        <ul>{ripper}</ul>
+        <ul>{asanaData}</ul>
       </div>
     );
   }
