@@ -27,7 +27,7 @@ class App extends Component {
 
   render() {
         let asanaData = this.state.asanas.map(items => {
-        return <Asana 
+        return <Asana class='Card'
                 key={items.id} 
                 sanskrit_name={items.sanskrit_name} 
                 english_name={items.english_name}

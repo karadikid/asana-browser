@@ -10,8 +10,8 @@ class Asana extends Component {
     console.log(this.props)
     return (
       <>
-    <Card>
-      <Card.Img src={this.props.url}/>
+    <Card class='Card'>
+      <Card.Img class='cardImage' src={this.props.url}/>
         <Card.Body>
           <Card.Title>{this.props.sanskrit_name}</Card.Title>
           <Card.Text>{this.props.english_name}</Card.Text>

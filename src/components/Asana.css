@@ -1,7 +1,15 @@
+.cardImage {
+    width: 300px;
+}
+
 .cardObject {
     display: flex;
     flex-wrap: wrap;
-    width: '18rem';   
-    max-width: 350px;
+    width: '18rem'; 
+    border: 2px black solid; 
 }
+
+/* .Card {
+    border: 2px black solid; 
+} */
 
