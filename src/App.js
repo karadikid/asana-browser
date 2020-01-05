@@ -1,46 +1,52 @@
 import React, { Component } from "react";
 import "./App.css";
-import Asana from './components/Asana'
-import CardColumns from 'react-bootstrap/CardColumns'
+import Asana from "./components/Asana";
+import CardColumns from "react-bootstrap/CardColumns";
 
 const url = "https://yogapi.herokuapp.com";
 
 class App extends Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
-      asanas : []
+      asanas: []
     };
   }
-  
+
   componentDidMount() {
     fetch(url)
       .then(response => response.json())
-      .then((data) => {
-        this.setState ({
+      .then(data => {
+        this.setState({
           asanas: data
-        })
+        });
       })
       .catch(err => {
-        console.error(err)
-      })
+        console.error(err);
+      });
   }
 
   render() {
-        let asanaData = this.state.asanas.map(items => {
-        return <Asana 
-                key={items.id} 
-                sanskrit_name={items.sanskrit_name} 
-                english_name={items.english_name}
-                url={items.img_url}  
-                />
-    })
+    let asanaData = this.state.asanas.map(items => {
+      return (
+        <Asana
+          key={items.id}
+          sanskrit_name={items.sanskrit_name}
+          english_name={items.english_name}
+          url={items.img_url}
+        />
+      );
+    });
 
     return (
-      <CardColumns>
-        <h1>Asana Browser</h1>
-        <ul class = 'cardObject'>{asanaData}</ul>
-      </CardColumns>
+      <>
+        <CardColumns>
+          <h1>Asana Browser</h1>
+          <ul class="cardObject">{asanaData}</ul>
+        </CardColumns>
+        <button>Add</button>
+        <button>Remove</button>
+      </>
     );
   }
 }
