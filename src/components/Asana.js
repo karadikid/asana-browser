@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import './Asana.css';
-import Card from "react-bootstrap/Card";
+import Card from 'react-bootstrap/Card';
+//https://react-bootstrap.github.io/components/cards/ for default methods
+
 
 class Asana extends Component {
 
