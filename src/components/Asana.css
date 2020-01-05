@@ -4,6 +4,6 @@ img {
 
 .Card {
     display: flex;
-    flex-wrap: nowrap;   
-
+    flex-wrap: nowrap;
+    width: '18rem';   
 }
