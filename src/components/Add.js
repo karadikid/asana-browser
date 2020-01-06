@@ -56,9 +56,11 @@ class Add extends Component {
  handleFormSubmit(event){ 
   event.preventDefault();
   fetch('https://yogapi.herokuapp.com', {
-   crossDomain:true,
    method: 'POST',
-   headers: {'Content-Type':'application/json'},
+   headers: {
+       'Content-Type':'application/json'
+       'Access-Control-Allow-Origin':'*',
+       },
    body: {
     "sanskrit_name" : this.sanskrit_name.value,
     "english_name" : this.english_name.value,
