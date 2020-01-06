@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import Asana from "./components/Asana";
+import Add from "./components/Add";
+import Remove from "./components/Remove";
 import CardColumns from "react-bootstrap/CardColumns";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 const url = "https://yogapi.herokuapp.com";
 
@@ -40,14 +43,25 @@ class App extends Component {
 
     return (
       <>
-        <div className='asanaBrowser'>
-        <h1>Asana Browser</h1>
-        <button className='cardButton' onClick=''>Add</button>
-        <button className='cardButton' onClick=''>Remove</button>
-        <CardColumns>
-          <ul className="cardObject">{asanaData}</ul>
-        </CardColumns>
-        </div>
+        <BrowserRouter>
+          <div >
+            <Route path='/'/>
+            <Link to='/'>
+            <h1>Asana Browser</h1>
+            </Link>
+            <Route path="/Add" exact component={Add} />
+            <Link to="/Add">
+              <button type="button">Add</button>
+            </Link>
+            {/* <Route path="/Remove" exact component={Remove} />
+            <Link to="/Remove">
+              <button type="button">Remove</button>
+            </Link> */}
+            <CardColumns>
+              <ul className="cardObject">{asanaData}</ul>
+            </CardColumns>
+          </div>
+        </BrowserRouter>
       </>
     );
   }

@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.cardButton {
+.button {
   display: flex;
   flex-wrap: nowrap;
   margin: auto;
