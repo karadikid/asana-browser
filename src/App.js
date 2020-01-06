@@ -6,7 +6,7 @@ import Remove from "./components/Remove";
 import CardColumns from "react-bootstrap/CardColumns";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-const url = "https://yogapi.ommygod.com";
+const url = "https://yogapi.herokuapp.com";
 
 class App extends Component {
   constructor() {
