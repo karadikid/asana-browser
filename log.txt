@@ -1,0 +1,110 @@
+2020-01-06T14:48:00.312Z [INFO]: Git SSH Key acquired
+2020-01-06T14:48:00.422Z [INFO]: # Cloning repository: git@github.com:karadikid/asana-browser.git
+2020-01-06T14:48:00.627Z [INFO]: Agent pid 70
+2020-01-06T14:48:00.633Z [INFO]: Identity added: /root/.ssh/git_rsa (/root/.ssh/git_rsa)
+2020-01-06T14:48:00.819Z [INFO]: Cloning into 'asana-browser'...
+2020-01-06T14:48:01.150Z [INFO]: Warning: Permanently added the RSA host key for IP address '140.82.114.3' to the list of known hosts.
+2020-01-06T14:48:01.733Z [INFO]: # Switching to commit: 51473f3caecc9b30869d0efe3294572b0cf11512
+2020-01-06T14:48:01.830Z [INFO]: Note: checking out '51473f3caecc9b30869d0efe3294572b0cf11512'.
+                                 You are in 'detached HEAD' state. You can look around, make experimental
+                                 changes and commit them, and you can discard any commits you make in this
+                                 state without impacting any branches by performing another checkout.
+                                 If you want to create a new branch to retain commits you create, you may
+                                 do so (now or later) by using -b with the checkout command again. Example:
+                                 git checkout -b <new-branch-name>
+                                 HEAD is now at 51473f3 Adding CORS to fetch request in App.js
+2020-01-06T14:48:01.831Z [INFO]: # Checking for Git submodules at: /codebuild/output/src301105102/src/asana-browser/.gitmodules
+2020-01-06T14:48:01.863Z [INFO]: # Retrieving cache...
+2020-01-06T14:48:03.926Z [INFO]: # Extracting cache...
+2020-01-06T14:48:10.309Z [INFO]: # Extraction completed
+2020-01-06T14:48:10.441Z [INFO]: # Retrieving environment cache...
+2020-01-06T14:48:10.479Z [INFO]: # Retrieved environment cache
+2020-01-06T14:48:44.021Z [INFO]: ## Starting Frontend Build
+                                 # Starting phase: preBuild
+                                 # Executing command: npm ci
+2020-01-06T14:48:45.033Z [WARNING]: npm
+2020-01-06T14:48:45.046Z [WARNING]: WARN prepare removing existing node_modules/ before installation
+2020-01-06T14:48:58.755Z [INFO]: > core-js@2.6.11 postinstall /codebuild/output/src301105102/src/asana-browser/node_modules/babel-runtime/node_modules/core-js
+                                 > node -e "try{require('./postinstall')}catch(e){}"
+2020-01-06T14:48:58.822Z [INFO]: Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+                                 The project needs your help! Please consider supporting of core-js on Open Collective or Patreon:
+                                 > https://opencollective.com/core-js
+                                 > https://www.patreon.com/zloirock
+                                 Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+2020-01-06T14:48:58.981Z [INFO]: > fsevents@1.2.9 install /codebuild/output/src301105102/src/asana-browser/node_modules/fsevents
+                                 > node install
+2020-01-06T14:48:59.159Z [INFO]: > core-js@3.6.1 postinstall /codebuild/output/src301105102/src/asana-browser/node_modules/core-js
+                                 > node -e "try{require('./postinstall')}catch(e){}"
+2020-01-06T14:48:59.448Z [INFO]: > core-js-pure@3.6.1 postinstall /codebuild/output/src301105102/src/asana-browser/node_modules/core-js-pure
+                                 > node -e "try{require('./postinstall')}catch(e){}"
+2020-01-06T14:48:59.602Z [INFO]: added 1575 packages in 14.59s
+2020-01-06T14:48:59.614Z [INFO]: # Completed phase: preBuild
+                                 # Starting phase: build
+2020-01-06T14:48:59.615Z [INFO]: # Executing command: npm run build
+2020-01-06T14:48:59.838Z [INFO]: > asana-browser@0.1.0 build /codebuild/output/src301105102/src/asana-browser
+                                 > react-scripts build
+2020-01-06T14:49:01.070Z [INFO]: Creating an optimized production build...
+2020-01-06T14:49:09.848Z [INFO]: Failed to compile.
+2020-01-06T14:49:09.850Z [INFO]: ./src/components/Add.js
+                                 Syntax error: Unexpected token, expected "," (62:8)
+                                 60 |    headers: {
+                                 61 |        'Content-Type':'application/json'
+                                 > 62 |        'Access-Control-Allow-Origin':'*',
+                                 |        ^
+                                 63 |        },
+                                 64 |    body: {
+                                 65 |     "sanskrit_name" : this.sanskrit_name.value,
+2020-01-06T14:49:09.865Z [WARNING]: npm
+2020-01-06T14:49:09.866Z [WARNING]: ERR! code ELIFECYCLE
+                                    npm ERR! errno 1
+                                    npm ERR! asana-browser@0.1.0 build: `react-scripts build`
+                                    npm ERR! Exit status 1
+                                    npm ERR!
+                                    npm ERR! Failed at the asana-browser@0.1.0 build script.
+                                    npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2020-01-06T14:49:09.876Z [WARNING]: 
+2020-01-06T14:49:09.878Z [WARNING]: npm ERR! A complete log of this run can be found in:
+                                    npm ERR!     /root/.npm/_logs/2020-01-06T14_49_09_867Z-debug.log
+2020-01-06T14:49:09.878Z [HELP]: Outputting the npm debug log
+                                 0 info it worked if it ends with ok
+                                 1 verbose cli [ '/root/.nvm/versions/node/v10.16.0/bin/node',
+                                 1 verbose cli   '/root/.nvm/versions/node/v10.16.0/bin/npm',
+                                 1 verbose cli   'run',
+                                 1 verbose cli   'build' ]
+                                 2 info using npm@6.9.0
+                                 3 info using node@v10.16.0
+                                 4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
+                                 5 info lifecycle asana-browser@0.1.0~prebuild: asana-browser@0.1.0
+                                 6 info lifecycle asana-browser@0.1.0~build: asana-browser@0.1.0
+                                 7 verbose lifecycle asana-browser@0.1.0~build: unsafe-perm in lifecycle true
+                                 8 verbose lifecycle asana-browser@0.1.0~build: PATH: /root/.nvm/versions/node/v10.16.0/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/codebuild/output/src301105102/src/asana-browser/node_modules/.bin:/usr/local/rvm/gems/ruby-2.4.6/bin:/usr/local/rvm/gems/ruby-2.4.6@global/bin:/usr/local/rvm/rubies/ruby-2.4.6/bin:/usr/local/rvm/bin:/root/.yarn/bin:/root/.config/yarn/global/node_modules/.bin:/root/.nvm/versions/node/v10.16.0/bin:/root/.local/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+                                 9 verbose lifecycle asana-browser@0.1.0~build: CWD: /codebuild/output/src301105102/src/asana-browser
+                                 10 silly lifecycle asana-browser@0.1.0~build: Args: [ '-c', 'react-scripts build' ]
+                                 11 silly lifecycle asana-browser@0.1.0~build: Returned: code: 1  signal: null
+                                 12 info lifecycle asana-browser@0.1.0~build: Failed to exec build script
+                                 13 verbose stack Error: asana-browser@0.1.0 build: `react-scripts build`
+                                 13 verbose stack Exit status 1
+                                 13 verbose stack     at EventEmitter.<anonymous> (/root/.nvm/versions/node/v10.16.0/lib/node_modules/npm/node_modules/npm-lifecycle/index.js:301:16)
+                                 13 verbose stack     at EventEmitter.emit (events.js:198:13)
+                                 13 verbose stack     at ChildProcess.<anonymous> (/root/.nvm/versions/node/v10.16.0/lib/node_modules/npm/node_modules/npm-lifecycle/lib/spawn.js:55:14)
+                                 13 verbose stack     at ChildProcess.emit (events.js:198:13)
+                                 13 verbose stack     at maybeClose (internal/child_process.js:982:16)
+                                 13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+                                 14 verbose pkgid asana-browser@0.1.0
+                                 15 verbose cwd /codebuild/output/src301105102/src/asana-browser
+                                 16 verbose Linux 4.14.152-98.182.amzn1.x86_64
+                                 17 verbose argv "/root/.nvm/versions/node/v10.16.0/bin/node" "/root/.nvm/versions/node/v10.16.0/bin/npm" "run" "build"
+                                 18 verbose node v10.16.0
+                                 19 verbose npm  v6.9.0
+                                 20 error code ELIFECYCLE
+                                 21 error errno 1
+                                 22 error asana-browser@0.1.0 build: `react-scripts build`
+                                 22 error Exit status 1
+                                 23 error Failed at the asana-browser@0.1.0 build script.
+                                 23 error This is probably not a problem with npm. There is likely additional logging output above.
+                                 24 verbose exit [ 1, true ]
+2020-01-06T14:49:09.881Z [ERROR]: !!! Build failed
+2020-01-06T14:49:10.023Z [ERROR]: !!! Non-Zero Exit Code detected
+2020-01-06T14:49:10.023Z [INFO]: # Starting environment caching...
+2020-01-06T14:49:10.024Z [INFO]: # Environment caching completed
+Terminating logging...

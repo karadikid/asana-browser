@@ -58,8 +58,8 @@ class Add extends Component {
   fetch('https://yogapi.herokuapp.com', {
    method: 'POST',
    headers: {
-       'Content-Type':'application/json'
-       'Access-Control-Allow-Origin':'*',
+       'Content-Type':'application/json',
+       'Access-Control-Allow-Origin':'*'
        },
    body: {
     "sanskrit_name" : this.sanskrit_name.value,
