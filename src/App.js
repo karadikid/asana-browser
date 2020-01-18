@@ -53,10 +53,10 @@ class App extends Component {
             <Link to="/Add">
               <button type="button">Add</button>
             </Link>
-            {/* <Route path="/Remove" exact component={Remove} />
+            <Route path="/Remove" exact component={Remove} />
             <Link to="/Remove">
               <button type="button">Remove</button>
-            </Link> */}
+            </Link>
             <CardColumns>
               <ul className="cardObject">{asanaData}</ul>
             </CardColumns>

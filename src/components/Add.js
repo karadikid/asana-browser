@@ -17,17 +17,18 @@ class Add extends Component {
 
     handleFormSubmit(event) {
     event.preventDefault();
+    alert('Submitted Reload Page, Click Remove Button and Use English Name to Remove.');
     fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: {
+      body: JSON.stringify({
         sanskrit_name: this.state.sanskrit_name,
         english_name: this.state.english_name,
         img_url: this.state.img_url,
         id: this.state.id
-      }
+      })
     });
     console.log(event)
   }
@@ -45,36 +46,24 @@ class Add extends Component {
         <div className="card">
           <form onSubmit={this.handleFormSubmit}>
             <input
-              ref={ref => {
-                this.sanskrit_name = ref;
-              }}
               placeholder="Sanskrit Asana Name"
               name="sanskrit_name"
               type="text"
               onChange={this.handleChange}
             />
             <input
-              ref={ref => {
-                this.english_name = ref;
-              }}
               placeholder="English Pose Name"
               name="english_name"
               type="text"
               onChange={this.handleChange}
             />
             <input
-              ref={ref => {
-                this.img_url = ref;
-              }}
               placeholder="http://path/to/image"
               name="img_url"
               type="text"
               onChange={this.handleChange}
             />
             <input
-              ref={ref => {
-                this.id = ref;
-              }}
               placeholder="# between 50-100"
               name="id"
               type="number"
