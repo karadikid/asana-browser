@@ -24,7 +24,6 @@ class Add extends Component {
         english_name: this.state.english_name
       })
     });
-    console.log(event)
   }
 
   handleChange(e) {

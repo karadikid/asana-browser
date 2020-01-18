@@ -30,7 +30,6 @@ class Add extends Component {
         id: this.state.id
       })
     });
-    console.log(event)
   }
 
   handleChange(e) {
