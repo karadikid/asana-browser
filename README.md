@@ -11,6 +11,8 @@ Uses AWS Amplify Serverless
 This application uses React to pull data from an API the developer designed and pushed to Heroku and MongoAtlas
 
 ![Asana-Browser-Screenshot](./asana-browser-screenshot.png "Asanas Browser")
+![Asana-Browser-Walkthrough](./asanas.ommygod.com.gif "Asanas Browser GIF")
+
 
 ## Locally
 
