@@ -14,6 +14,7 @@ class Add extends Component {
 
     handleFormSubmit(event) {
     event.preventDefault();
+    alert('Asana Removed. Please click refresh to reload.');
     fetch(url, {
       method: "POST",
       headers: {
