@@ -1,11 +1,42 @@
 import React, { Component } from "react";
 import "./Add.css";
+const url = 'https://yogapi.herokuapp.com';
 
 class Add extends Component {
   constructor() {
     super();
+    this.state = {
+      sanskrit_name: '',
+      english_name: '',
+      img_url: '',
+      id: 0
+    }
     this.handleChange = this.handleChange.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  }
+
+    handleFormSubmit(event) {
+    event.preventDefault();
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: {
+        sanskrit_name: this.state.sanskrit_name,
+        english_name: this.state.english_name,
+        img_url: this.state.img_url,
+        id: this.state.id
+      }
+    });
+    console.log(event)
+  }
+
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+    console.log(this.state)
   }
 
   render() {
@@ -54,27 +85,6 @@ class Add extends Component {
         </div>
       </div>
     );
-  }
-
-  handleFormSubmit(event) {
-    event.preventDefault();
-    fetch("https://yogapi.herokuapp.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      },
-      body: {
-        sanskrit_name: this.sanskrit_name.value,
-        english_name: this.english_name.value,
-        img_url: this.img_url.value
-      }
-    });
-  }
-  handleChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
   }
 }
 
